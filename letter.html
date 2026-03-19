@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eid Letter</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#FFDEE9;
+}
+
+.container {
+    max-width:700px;
+    padding:50px;
+    background-color:rgba(255,255,255,0.9);
+    border-radius:20px;
+    text-align:center;
+    font-size:20px;
+    line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2 id="title"></h2>
+
+    <p>
+        As Muslims, may Allah bless you more and fill your life with happiness and peace.
+        We will always be together, and may this Eid bring endless joy to you and your family. 🌙✨
+    </p>
+
+    <button onclick="goNext()">Next</button>
+</div>
+
+<script>
+// GET NAME FROM LOCAL STORAGE
+const name = localStorage.getItem("eidUserName") || "Friend";
+
+document.getElementById("title").textContent = `Eid Mubarak, ${name}! 🎉`;
+
+// NEXT PAGE
+function goNext() {
+    window.location.href = "surprise.html";
+}
+</script>
+
+</body>
+</html>
