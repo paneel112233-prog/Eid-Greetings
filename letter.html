@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Eid Letter</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.container {
+    max-width: 700px;
+    padding: 50px;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 1s ease;
+    transform: rotateX(90deg); /* start folded */
+}
+.container.show {
+    transform: rotateX(0deg); /* unfold */
+}
+button {
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+ 
+<div class="container" id="letterContainer">
+       <h1> Eid Mubarak</h1>
+    <p>As Muslims, we are united by faith, love, and brotherhood. On this blessed occasion of Eid, I pray that Allah fills your life with happiness, peace, and endless blessings. May He guide you towards success and protect you always. May your heart always stay strong in faith and your life be full of joy and prosperity. No matter where life takes us, we will always stand by each other, sharing smiles, memories, and support forever. Eid Mubarak to you once again! 🌙✨</p>
+    <button id="nextBtn">Next</button>
+</div>
+
+<script>
+const container = document.getElementById('letterContainer');
+window.onload = () => {
+    setTimeout(() => {
+        container.classList.add('show'); // unfold animation
+    }, 500);
+};
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    window.location.href = 'surprise.html'; // page 3
+});
+</script>
+</body>
+</html>
